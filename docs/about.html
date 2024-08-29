@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <img src="avatar.jpg" alt="Your Name">
+        <h1>Your Name</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2 data-lang="en">About Me</h2>
+            <h2 data-lang="es" style="display:none;">Sobre Mí</h2>
+            <p data-lang="en">This section contains information about you. Include your background, skills, and interests here.</p>
+            <p data-lang="es" style="display:none;">Esta sección contiene información sobre ti. Incluye tu experiencia, habilidades e intereses aquí.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>Follow me: 
+            <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> | 
+            <a href="https://github.com/yourusername">GitHub</a> | 
+            <a href="https://twitter.com/yourhandle">Twitter</a>
+        </p>
+        <button onclick="changeLanguage('en')" class="language-switch">EN</button>
+        <button onclick="changeLanguage('es')" class="language-switch">ES</button>
+    </footer>
+
+</body>
+</html>

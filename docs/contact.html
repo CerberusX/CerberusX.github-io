@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <img src="avatar.jpg" alt="Your Name">
+        <h1>Your Name</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2 data-lang="en">About Me</h2>
+            <h2 data-lang="zh" style="display:none;">关于我</h2>
+
+            <div class="block" data-lang="en">
+                <h3>Background</h3>
+                <p>Include your background information here.</p>
+            </div>
+            <div class="block" data-lang="zh" style="display:none;">
+                <h3>背景</h3>
+                <p>在此处包含您的背景信息。</p>
+            </div>
+
+            <div class="block" data-lang="en">
+                <h3>Skills</h3>
+                <p>List your skills here.</p>
+            </div>
+            <div class="block" data-lang="zh" style="display:none;">
+                <h3>技能</h3>
+                <p>在此列出您的技能。</p>
+            </div>
+
+            <div class="block" data-lang="en">
+                <h3>Interests</h3>
+                <p>Mention your interests here.</p>
+            </div>
+            <div class="block" data-lang="zh" style="display:none;">
+                <h3>兴趣</h3>
+                <p>在此提及您的兴趣。</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>Follow me: 
+            <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> | 
+            <a href="https://github.com/yourusername">GitHub</a> | 
+            <a href="https://twitter.com/yourhandle">Twitter</a>
+        </p>
+        <button onclick="changeLanguage('en')" class="language-switch">EN</button>
+        <button onclick="changeLanguage('zh')" class="language-switch">中文</button>
+    </footer>
+
+</body>
+</html>

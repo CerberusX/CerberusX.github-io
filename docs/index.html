@@ -1,156 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV Design in HTML&CSS</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huang Yuhang's Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            background: url('home-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        section {
+            min-height: 100vh; /* 每个部分占据整屏高度 */
+            padding: 60px 20px;
+        }
+
+        #home {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #about {
+            background-color: rgba(30, 30, 30, 0.5);
+        }
+
+        #resume {
+            background-color: rgba(60, 60, 60, 0.5);
+        }
+
+        #contact {
+            background-color: rgba(90, 90, 90, 0.5);
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            position: left;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 93px;
+            height: 93px;
+            position: absolute;
+            top: 15px;
+            left: calc(2%);
+            transform: translateX(30%);
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header img:hover {
+            transform: translateX(30%) scale(1.2);
+        }
+
+        nav {
+            display: fixed;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 16px 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 14px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #000000;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .nav-links a {
+            color: #ffffff; /* 修改导航链接的字体颜色 */
+            padding: 20px 40px; /* 修改导航链接的内边距，调整链接之间的间距 */
+            font-size: 18px; /* 修改导航链接的字体大小 */
+            text-transform: uppercase; /* 设置文本为大写（可选） */
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #000000; /* 鼠标悬停时的字体颜色 */
+            background-color: rgba(255, 255, 255, 0.7); /* 鼠标悬停时的背景颜色 */
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="top">
-      <h2>John Doe<br><span>Creative Designer</span></h2>
-      <div class="group">
-        <div class="leftSide">
-          <div class="imgBx">
-            <img src="./images/img.jpg">
-          </div>
-        </div>
-        <div class="rightSide">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores eligendi repudiandae quos necessitatibus iste repellendus animi similique numquam laborum, quas dignissimos quis modi doloribus quidem quaerat. Obcaecati exercitationem a temporibus.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. necessitatibus suscipit dolores alias repellat.</p>
-        </div>
-      </div>
-    </div>
-    <div class="bottom">
-      <div class="left_side">
-        <h4>Contact</h4>
-        <ul class="contactInfo">
-          <li>
-            <span class="icon"><i class="fa-solid fa-phone"></i></span>
-            <span class="text">+1 234 5678 900</span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-            <span class="text">jhon@email.com</span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa-solid fa-globe"></i></span>
-            <span class="text">www.mywebsite.com</span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa-brands fa-linkedin-in"></i></span>
-            <span class="text">www.linkedin.com/me</span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa-sharp fa-solid fa-location-dot"></i></span>
-            <span class="text">Patna, Bihar, India</span>
-          </li>
-        </ul>
 
-        <h4>Skills</h4>
-        <div class="skills">
-          <div class="skillsBox" style="--i:85%;">
-            <p>HTML</p>
-            <div class="value"></div>
-          </div>
-          <div class="skillsBox" style="--i:70%;">
-            <p>CSS</p>
-            <div class="value"></div>
-          </div>
-          <div class="skillsBox" style="--i:91%;">
-            <p>Javasript</p>
-            <div class="value"></div>
-          </div>
-          <div class="skillsBox" style="--i:84%;">
-            <p>ReactJS</p>
-            <div class="value"></div>
-          </div>
-          <div class="skillsBox" style="--i:60%;">
-            <p>Figma</p>
-            <div class="value"></div>
-          </div>
-          <div class="skillsBox" style="--i:55%;">
-            <p>Photoshop</p>
-            <div class="value"></div>
-          </div>
-        </div>
-      </div>
-      <div class="right_side">
-        <h4 class="adjstMargin">Education</h4>
-        <div class="deu_group">
-          <div class="deu_groupBx">
-            <p>2007-2009</p>
-            <div class="value">
-              <b>Degree Name</b>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias, sit neque sequi molestiae dignissimos?</p>
-            </div>
-          </div>
-          <div class="deu_groupBx">
-            <p>2009-2013</p>
-            <div class="value">
-              <b>Degree Name</b>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias, sit neque sequi molestiae dignissimos?</p>
-            </div>
-          </div>
-        </div>
+    <header>
+        <a href="#about">
+            <img src="avatar.jpg" alt="Your Name">
+        </a>
+        <h1 data-en="Huang Yuhang's Profile" data-zh="黄宇航">Huang Yuhang's Profile</h1>
+    </header>
 
-        <h4>Work experience</h4>
-        <div class="deu_group">
-          <div class="deu_groupBx">
-            <p>2013-2016</p>
-            <div class="value">
-              <b>Job Title<br><span>Company Name</span></b>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias, sit neque sequi molestiae dignissimos?</p>
-            </div>
-          </div>
-          <div class="deu_groupBx">
-            <p>2016-2021</p>
-            <div class="value">
-              <b>Job Title<br><span>Company Name</span></b>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias, sit neque sequi molestiae dignissimos?</p>
-            </div>
-          </div>
-          <div class="deu_groupBx">
-            <p>2021-2023</p>
-            <div class="value">
-              <b>Job Title<br><span>Company Name</span></b>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias, sit neque sequi molestiae dignissimos?</p>
-            </div>
-          </div>
+    <nav>
+        <div class="nav-links">
+            <a href="#home" data-en="Home" data-zh="首页">Home</a>
+            <a href="#about" data-en="About Me" data-zh="关于我">About Me</a>
+            <a href="#resume" data-en="Resume" data-zh="简历">Resume</a>
+            <a href="#contact" data-en="Contact" data-zh="联系">Contact</a>
         </div>
-      </div>
+    </nav>
+        <!-- 语言切换下拉菜单，放在页面右上角 -->
+    <div class="language-switch">
+        <select onchange="switchLanguage(this.value)">
+            <option value="zh">中文</option>
+            <option value="en">EN</option>
+        </select>
     </div>
-    <div class="hobbies">
-      <h4 class="adjstMargin">hobbies</h4>
-      <ul>
-        <li>
-          <i class="fa-solid fa-music"></i>
-          <p>Misic</p>
-        </li>
-        <li>
-          <i class="fa-solid fa-camera-retro"></i>
-          <p>Photography</p>
-        </li>
-        <li>
-          <i class="fa-solid fa-gamepad"></i>
-          <p>Gaming</p>
-        </li>
-        <li>
-          <i class="fa-solid fa-paintbrush"></i> 
-          <p>Painting</p>
-        </li>
-        <li>
-          <i class="fa-solid fa-microphone"></i>
-          <p>Singing</p>
-        </li>
-        <li>
-          <i class="fa-sharp fa-solid fa-book"></i>
-          <p>Reading</p>
-        </li>
-      </ul>
+    <div class="container">
+        <section id="home">
+            <h2 class="large-text" data-en="Welcome" data-zh="欢迎">Welcome</h2>
+            <p data-en="This is the home section. You can include an introduction or a welcome message here." 
+               data-zh="这是主页部分。你可以在这里包含一个介绍或欢迎信息。">
+               This is the home section. You can include an introduction or a welcome message here.
+            </p>
+            <!-- content.html -->
+            <div class="scattered-content">
+                <p class="line" style="position: absolute; top: -100px; left: -100px;" data-en="Made by GPT-4o, I know nothing about frontend.🆒" data-zh="用GPT-4o做的页面..我啥也不会（不是）">用GPT-4o做的页面..我啥也不会（不是）</p>
+                <p class="line" style="position: absolute; top: 70px; left: 500px;" data-en="It's random, it's rough, it's a show-off.😄" data-zh="随便弄得，很粗糙，主打一个显摆😄">随便弄得，很粗糙，主打一个显摆😄</p>
+                <p class="line" style="position: absolute; top: 100px; left: -180px;" data-en="Scroll down for more stories of teenage boys.😂" data-zh="往下滑看更多少男往事">往下滑看更多少男往事😂</p>
+                <p class="line" style="position: absolute; top: 350px; left: 400px;" >背景在 <span style="font-size: 1.5em; font-weight: bold;">新疆</span> 拍的👉
+                    <a href="#" class="preview-link" onclick="openModal()">
+                        赛里木湖
+                        <span class="image-preview">
+                            <img src="lake_gallery/lake.jpg" alt="赛里木湖" />
+                        </span>
+                    </a>
+                </p>
+                <p class="line" style="position: absolute; top: 400px; left: 0px;" data-en="Looking for jobs...🤔" data-zh="人现在还在求职...🤔">人现在还在求职...🤔</p>
+            </div>
+            
+            <!-- 模态窗口结构 -->
+            <div id="imageModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="image-gallery">
+                        <div class="image-wrapper">
+                            <img src="lake_gallery/lake.jpg" alt="赛里木湖 1">
+                            <img src="lake_gallery/lake1.jpg" alt="赛里木湖 2">
+                            <img src="lake_gallery/lake2.jpg" alt="赛里木湖 3">
+                            <img src="lake_gallery/lake3.jpg" alt="赛里木湖 4">
+                            <img src="lake_gallery/lake4.jpg" alt="赛里木湖 5">
+                            <img src="lake_gallery/lake5.jpg" alt="赛里木湖 6">
+                            <img src="lake_gallery/lake6.jpg" alt="赛里木湖 7">
+                            <img src="lake_gallery/lake7.jpg" alt="赛里木湖 8">
+                            <!-- 更多图片可以在这里添加 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    
+        <section id="about">
+            <h2 class="large-text" data-en="About Me" data-zh="我是谁？">About Me</h2>
+            <p data-en="This section contains information about me." 
+               data-zh="网上的信息真真假假，请大家谨慎辨别🆗">
+               网上的信息真真假假，请大家谨慎辨别🆗           
+             </p>
+        </section>
+    
+        <section id="resume">
+            <h2 class="large-text" data-en="Resume" data-zh="简历">Resume</h2>
+            <p data-en="Produced by LateX, the individual's Sheng Chen Ba Zi is as follows" 
+               data-zh="个人生平事迹如下 👇">
+               Produced by LateX, the individual's Sheng Chen Ba Zi is as follows
+            </p>
+            <div id="resumeContainer" class="container">
+                <button id="viewResumeButton" onclick="showResume()" data-en="Click to View Resume" data-zh="点击查看我求学以来都干了什么坏事😏">Click to View Resume</button>
+            </div>
+        
+        </section>
+        <!-- Modal Structure -->
+        <div id="pdfModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeResume()">&times;</span>
+                <iframe id="resumePDF" src="" style="width: 100%; height: 100%;"></iframe>
+            </div>
+        </div>
+    
+        <section id="contact">
+            <h2 data-en="Contact" data-zh="联系我">Contact</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" data-en="Send Message" data-zh="发送信息">Send Message</button>
+            </form>
+        </section>
     </div>
-  </div>
+
+    <footer>
+        <p data-en="&copy; 2024 Your Name. All rights reserved. Follow me:" data-zh="&copy; 2024 黄宇航，保留所有权利。关注我：">&copy; 2024 Your Name. All rights reserved. Follow me:</p>
+        <p>   
+            <a href="https://www.linkedin.com/in/yourprofile" data-en="LinkedIn" data-zh="领英">LinkedIn</a> | 
+            <a href="https://github.com/yourusername" data-en="Github" data-zh="Github">GitHub</a> | 
+            <a href="https://twitter.com/yourhandle" data-en="Twitter" data-zh="推特">Twitter</a>
+        </p>
+    </footer>
+
 </body>
 </html>

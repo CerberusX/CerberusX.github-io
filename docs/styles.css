@@ -1,0 +1,430 @@
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background: linear-gradient(rgba(255, 255, 255, 0.212), rgba(255, 255, 255, 0.185)), 
+                url('home-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: transform 0.5s ease-out; /* 设置平滑的拖拽感 */
+}
+
+
+html {
+    scroll-behavior: smooth;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.5, 1); /* 缓动函数，带来厚重感 */
+}
+
+
+
+header {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 50px);
+    transform: translateX(30%);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: translateX(30%) scale(1.2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #ffffff;
+    padding: 14px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-links a {
+    color: #ffffff; /* 修改导航链接的字体颜色 */
+    padding: 14px 20px; /* 修改导航链接的内边距，调整链接之间的间距 */
+    font-size: 16px; /* 修改导航链接的字体大小 */
+    text-transform: uppercase; /* 设置文本为大写（可选） */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #000000; /* 鼠标悬停时的字体颜色 */
+    background-color: rgba(255, 255, 255, 0.7); /* 鼠标悬停时的背景颜色 */
+}
+
+section {
+    min-height: 100vh; /* 每个部分占据整屏高度 */
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#about {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+#resume {
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+#contact {
+    background-color: rgb(255, 255, 255);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.large-text {
+    font-size: 36px;
+  }
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+footer a {
+    color: #007bff; /* 确保颜色与背景形成对比 */
+    text-decoration: none;
+    display: inline;
+    font-size: 15px;
+}
+
+footer a:hover {
+    color: #0056b3; /* 悬停时颜色变化 */
+    text-decoration: underline;
+}
+
+.language-switch {
+    position: absolute;
+    top: 10px; /* 距离页面顶部的距离 */
+    right: 15px; /* 距离页面右侧的距离 */
+    z-index: 1000; /* 保证在所有元素上方 */
+}
+
+.language-switch select {
+    width: 60px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-switch select:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000000;
+}
+
+.language-switch::after {
+    content: '▼';
+    position: absolute;
+    right: 10px; /* 调整箭头距离下拉框右侧的距离 */
+    top: 50%; /* 调整箭头的垂直位置 */
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #ffffff;
+    font-size: 12px; /* 调整箭头的大小 */
+}
+
+#resumeContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+button#viewResumeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #767c83;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#viewResumeButton:hover {
+    background-color: #0c0e0f;
+}
+
+#pdfContainer {
+    width: 100%;
+    height: 100%; /* Fixed height, but you can adjust it */
+    overflow-y: auto; /* Enables scrolling within the container */
+    border: none;
+}
+
+#pdfContainer iframe {
+    width: 100%;
+    border: none;
+}
+/* Modal Container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 80vh; /* 80% of the viewport height */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#home {
+    position: relative;
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#home h2.large-text {
+    position: relative;
+    z-index: 1; /* 确保标题在最上层 */
+    text-align: center;
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+.scattered-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* 禁用鼠标事件防止点击内容 */
+}
+
+.scattered-content .line {
+    font-size: 16px;
+    color: #ffffff;
+    position: absolute;
+    z-index: 0; /* 确保文本在标题后面 */
+    pointer-events: auto; /* 允许文本本身点击 */
+}
+
+.preview-link {
+    color: #007bff; /* 默认链接颜色 */
+    text-decoration: none;
+    position: relative;
+}
+
+.preview-link:hover {
+    color: #0056b3; /* 悬停时的链接颜色 */
+}
+
+.image-preview {
+    display: none; /* 默认隐藏图片框 */
+    position: absolute;
+    top: -120px; /* 根据需要调整位置 */
+    left: 100%; /* 让图片框在链接的右侧显示 */
+    width: 200px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.preview-link:hover .image-preview {
+    display: block; /* 悬停时显示图片框 */
+}
+
+
+.preview-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.preview-link:hover {
+    color: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-gallery {
+    overflow-x: auto; /* 启用水平滚动 */
+    white-space: nowrap; /* 确保图片水平排列 */
+}
+
+.image-wrapper {
+    display: inline-block;
+}
+
+.image-gallery img {
+    display: inline-block;
+    width: 100%; /* 可以调整此宽度以显示更多或更少的图片 */
+    max-width: 300px; /* 设置图片最大宽度 */
+    margin-right: 10px; /* 设置图片之间的间距 */
+    border-radius: 4px;
+    vertical-align: middle;
+}
